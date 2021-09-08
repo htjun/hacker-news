@@ -1,5 +1,6 @@
 import getTopStories from 'src/helpers/getTopStories'
 import Layout from 'src/components/Layout'
+import Navigation from 'src/components/Navigation'
 
 export async function getStaticProps() {
   const data = await getTopStories()
@@ -14,18 +15,7 @@ export async function getStaticProps() {
 const TopStories = ({ data }: any) => {
   return (
     <Layout>
-      <aside>
-        <h1>Hacker News</h1>
-        <nav>
-          <ul>
-            <li>Top stories</li>
-            <li>New stories</li>
-            <li>Ask HN</li>
-            <li>Show HN</li>
-            <li>Jobs</li>
-          </ul>
-        </nav>
-      </aside>
+      <Navigation />
       <main>
         <input type="text" placeholder="Search..."/>
         <ul>
