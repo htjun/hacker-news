@@ -1,4 +1,16 @@
-const Home = () => {
+import getTopStories from 'src/helpers/getTopStories'
+
+export async function getStaticProps() {
+  const data = await getTopStories()
+  return {
+    props: {
+      data
+    }
+  }
+}
+
+
+const TopStories = ({ data }: any) => {
   return (
     <>
       <aside>
@@ -16,13 +28,13 @@ const Home = () => {
       <main>
         <input type="text" placeholder="Search..."/>
         <ul>
-          <li>Story item</li>
+          {data.map((item: any) => {
+            return <li key={item.id}>{item.title}</li>
+          })}
         </ul>
       </main>
-      <aside></aside>
-
     </>
   )
 }
 
-export default Home
+export default TopStories
