@@ -1,4 +1,5 @@
 import getTopStories from 'src/helpers/getTopStories'
+import Layout from 'src/components/Layout'
 
 export async function getStaticProps() {
   const data = await getTopStories()
@@ -12,7 +13,7 @@ export async function getStaticProps() {
 
 const TopStories = ({ data }: any) => {
   return (
-    <>
+    <Layout>
       <aside>
         <h1>Hacker News</h1>
         <nav>
@@ -33,7 +34,7 @@ const TopStories = ({ data }: any) => {
           })}
         </ul>
       </main>
-    </>
+    </Layout>
   )
 }
 
