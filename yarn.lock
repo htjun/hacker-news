@@ -1000,6 +1000,11 @@ des.js@^1.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
+destyle.css@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/destyle.css/-/destyle.css-3.0.0.tgz#0d151e33dc3b7e4d6488114d96a8fa0ad4bc50e7"
+  integrity sha512-NLkxtcN2M4F9kxzqgtam4/5dXLOqrGG2JrOhOBiO0tM3kzJlkeM5ZVEn6G9YSRWLet7vMCCdCVdM6a0YC7sHcg==
+
 diffie-hellman@^5.0.0:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/diffie-hellman/-/diffie-hellman-5.0.3.tgz#40e8ee98f55a2149607146921c63e1ae5f3d2875"
