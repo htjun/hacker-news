@@ -12,7 +12,6 @@ export async function getStaticProps() {
   }
 }
 
-
 const TopStories = ({ data }: any) => {
   return (
     <Layout>
