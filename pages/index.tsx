@@ -1,6 +1,7 @@
 import getTopStories from 'src/helpers/getTopStories'
 import Layout from 'src/components/Layout'
 import Navigation from 'src/components/Navigation'
+import SearchInput from 'src/components/SearchInput'
 import Stories from 'src/components/Stories'
 
 export async function getStaticProps() {
@@ -17,7 +18,7 @@ const TopStories = ({ data }: any) => {
     <Layout>
       <Navigation />
       <main>
-        <input type="text" placeholder="Search..."/>
+        <SearchInput />
         <Stories data={data} />
       </main>
     </Layout>

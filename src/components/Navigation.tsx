@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { NavWrapper, SiteName, NavItem } from 'src/styles/Navigation.style'
+import { NavWrapper, SiteName, NavItemWrapper, NavItem } from 'src/styles/Navigation.style'
 import HnLogo from 'src/assets/images/HnLogo.svg'
 import IconGraphUp from 'src/assets/icons/IconGraphUp.svg'
 import IconHandUp from 'src/assets/icons/IconHandUp.svg'
@@ -47,7 +47,7 @@ const Navigation = () => {
         <HnLogo />
         <s />
       </SiteName>
-      <nav>
+      <NavItemWrapper>
         <ul>
           {menu.map((item, index) => {
             return (
@@ -64,7 +64,7 @@ const Navigation = () => {
         )
       })}
         </ul>
-      </nav>
+      </NavItemWrapper>
     </NavWrapper>
   )
 }

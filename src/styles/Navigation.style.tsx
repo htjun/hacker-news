@@ -14,7 +14,7 @@ export const SiteName = styled.h1`
   color: orangered;
 
   svg {
-    width: 48px;
+    width: 60px;
     fill: orangered;
   }
 
@@ -25,6 +25,11 @@ export const SiteName = styled.h1`
     margin-left: -2px;
     background-color: currentColor;
   }
+`
+
+export const NavItemWrapper = styled.nav`
+  position: sticky;
+  top: 48px;
 `
 
 export const NavItem = styled.li`
