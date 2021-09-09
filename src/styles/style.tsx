@@ -16,7 +16,7 @@ export const hsl = (color: string, lightness: number) => {
 // Typography
 export const fontSet = {
   sans: `'Inter', sans-serif`,
-  heading: `'Telegraf', 'Inter', sans-serif`,
+  heading: `'raf', 'Inter', sans-serif`,
   serif: `serif`,
 }
 

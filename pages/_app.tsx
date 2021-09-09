@@ -14,9 +14,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'Telegraf';
-    src: url('fonts/Telegraf-Bold.eot');
-    src: url('fonts/Telegraf-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Telegraf-Bold.woff2') format('woff2'), url('fonts/Telegraf-Bold.woff') format('woff');
+    font-family: 'raf';
+    src: url('fonts/raf-bold.eot');
+    src: url('fonts/raf-bold.eot?#iefix') format('embedded-opentype'), url('fonts/raf-bold.woff2') format('woff2'), url('fonts/raf-bold.woff') format('woff');
     font-weight: 700;
     font-style: bold;
     font-display: swap;
