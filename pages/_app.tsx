@@ -13,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${style.fontSet.sans};
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
   @font-face {
     font-family: 'raf';
     src: url('fonts/raf-bold.eot');
