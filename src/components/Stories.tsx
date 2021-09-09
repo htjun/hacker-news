@@ -1,4 +1,5 @@
 import { StoriesWrapper } from 'src/styles/Stories.style'
+import Story from 'src/components/Story'
 
 const Stories = (props: any) => {
   const { data } = props
@@ -6,7 +7,7 @@ const Stories = (props: any) => {
   return (
     <StoriesWrapper>
       {data.map((item: any) => {
-        return <li key={item.id}>{item.title}</li>
+        return <Story key={item.id} data={item} />
       })}
     </StoriesWrapper>
   )
