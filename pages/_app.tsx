@@ -12,6 +12,15 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-family: ${style.fontSet.sans};
   }
+
+  @font-face {
+    font-family: 'Telegraf';
+    src: url('fonts/Telegraf-Bold.eot');
+    src: url('fonts/Telegraf-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Telegraf-Bold.woff2') format('woff2'), url('fonts/Telegraf-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+  }
 `
 
 function MyApp({ Component, pageProps }: AppProps) {
