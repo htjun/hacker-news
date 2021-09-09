@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { NavWrapper, NavItem } from 'src/styles/Navigation.style'
+import HnLogo from 'src/assets/images/HnLogo.svg'
 import IconGraphUp from 'src/assets/icons/IconGraphUp.svg'
 import IconHandUp from 'src/assets/icons/IconHandUp.svg'
 import IconIdCard from 'src/assets/icons/IconIdCard.svg'
@@ -42,7 +43,7 @@ const Navigation = () => {
 
   return (
     <NavWrapper>
-      <h1>Hacker News</h1>
+      <h1><HnLogo /></h1>
       <nav>
         <ul>
           {menu.map((item, index) => {
