@@ -4,6 +4,27 @@ import * as style from 'src/styles/style'
 export const NavWrapper = styled.aside`
   display: block;
   width: 180px;
+  margin-right: 64px;
+`
+
+export const SiteName = styled.h1`
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 48px;
+  color: orangered;
+
+  svg {
+    width: 48px;
+    fill: orangered;
+  }
+
+  s {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-left: -2px;
+    background-color: currentColor;
+  }
 `
 
 export const NavItem = styled.li`
@@ -18,6 +39,7 @@ export const NavItem = styled.li`
     font-weight: ${style.fontWeight.medium};
     line-height: ${style.textLineHeight.normal};
     color: ${style.hsl("neutral", 64)};
+    transition: all 0.08s linear;
 
     svg {
       width: 16px;
@@ -28,6 +50,7 @@ export const NavItem = styled.li`
     }
 
     &:hover {
+      color: ${style.hsl("neutral", 32)};
       background-color: ${style.hsl("neutral", 98)};
     }
   }
@@ -35,6 +58,7 @@ export const NavItem = styled.li`
   &.active {
     a {
       color: ${style.hsl("neutral", 4)};
+      background-color: ${style.hsl("neutral", 96)};
     }
   }
 `
