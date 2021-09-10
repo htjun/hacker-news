@@ -5,11 +5,20 @@ export const StoryWrapper = styled.li`
   padding-bottom: 24px;
   border-bottom: 1px solid ${style.hsl("neutral", 92)};
   margin-bottom: 24px;
+`
 
-  h2 {
-    font-family: ${style.fontSet.heading};
-    font-size: ${style.fontSize.lg};
-    line-height: ${style.textLineHeight.tight};
+export const StoryTitle = styled.h2`
+  font-family: ${style.fontSet.heading};
+  font-size: ${style.fontSize.lg};
+  font-weight: ${style.fontWeight.bold};
+  line-height: ${style.textLineHeight.tight};
+
+  a {
+    padding: 1px 0;
+
+    &:hover {
+      background-color: ${style.hsl("neutral", 96)};
+    }
   }
 `
 

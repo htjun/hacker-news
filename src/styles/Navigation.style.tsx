@@ -3,7 +3,7 @@ import * as style from 'src/styles/style'
 
 export const NavWrapper = styled.aside`
   display: block;
-  width: 180px;
+  width: 200px;
   margin-right: 64px;
 `
 
@@ -22,6 +22,7 @@ export const SiteName = styled.h1`
     display: block;
     width: 100%;
     height: 1px;
+    margin-top: -1px;
     margin-left: -2px;
     background-color: currentColor;
   }
