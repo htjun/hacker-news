@@ -1,13 +1,9 @@
 const urlRegex = /\/\/[www.]*(.*?)\//
 
 const shortenUrl = (url: any) => {
-  let shortenedUrl = []
+  const match = url.match(urlRegex)
 
-  if (url) {
-    shortenedUrl = url.match(urlRegex)
-  }
-
-  return shortenedUrl && shortenedUrl[1]
+  return match && match[1]
 }
 
 export default shortenUrl
