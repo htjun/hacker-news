@@ -14,11 +14,35 @@ export const StoryTitle = styled.h2`
   line-height: ${style.textLineHeight.tight};
 
   a {
-    padding: 1px 0;
+    border-bottom: 1px solid rgba(255,255,255, 0);
+    padding-bottom: 2px;
+    transition: all 0.12s;
+
+    svg {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin-left: 4px;
+      margin-bottom: 2px;
+      fill: currentColor;
+      opacity: 0;
+      transition: opacity 0.12s;
+    }
 
     &:hover {
-      background-color: ${style.hsl("neutral", 96)};
+      border-bottom: 1px solid ${style.hsl("neutral", 24)};
+
+      svg {
+        opacity: 1;
+      }
     }
+
+    &:visited {
+      color: rebeccapurple;
+    }
+
+
   }
 `
 
@@ -33,9 +57,9 @@ export const Url = styled.span`
 
 export const StoryDetails = styled.ul`
   display: flex;
-  margin-top: 16px;
+  margin-top: 20px;
   font-size: ${style.fontSize.sm};
-  color: ${style.hsl("neutral", 12)};
+  color: ${style.hsl("neutral", 24)};
 
   li {
     margin-right: 8px;
@@ -53,6 +77,10 @@ export const StoryDetails = styled.ul`
 
     &:last-of-type::after {
       display: none;
+    }
+
+    strong {
+      font-weight: ${style.fontWeight.semibold};
     }
   }
 `
