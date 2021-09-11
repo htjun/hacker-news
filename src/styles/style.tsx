@@ -6,6 +6,12 @@ export const hsl = (color: string, lightness: number) => {
     case "neutral":
       hs = "216, 8%"
       break;
+    case "navy":
+      hs = "224, 24%"
+      break;
+    case "blue":
+      hs = "224, 64%"
+      break;
     default:
       hs = "216, 8%"
       break;

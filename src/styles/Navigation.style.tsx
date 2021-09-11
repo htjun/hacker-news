@@ -11,11 +11,11 @@ export const SiteName = styled.h1`
   display: flex;
   align-items: baseline;
   margin-bottom: 48px;
-  color: orangered;
+  color: ${style.hsl("navy", 24)};
 
   svg {
     width: 60px;
-    fill: orangered;
+    fill: currentColor;
   }
 
   s {
@@ -63,8 +63,8 @@ export const NavItem = styled.li`
 
   &.active {
     a {
-      color: ${style.hsl("neutral", 4)};
-      background-color: ${style.hsl("neutral", 96)};
+      color: ${style.hsl("blue",16)};
+      background-color: ${style.hsl("navy", 96)};
     }
   }
 `

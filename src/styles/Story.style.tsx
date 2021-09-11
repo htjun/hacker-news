@@ -23,23 +23,26 @@ export const StoryTitle = styled.h2`
       width: 16px;
       height: 16px;
       vertical-align: middle;
-      margin-left: 4px;
       margin-bottom: 2px;
+    }
+
+    svg.arrow-up-right {
+      margin-left: 4px;
       fill: currentColor;
       opacity: 0;
       transition: opacity 0.12s;
     }
 
     &:hover {
-      border-bottom: 1px solid ${style.hsl("neutral", 24)};
+      border-bottom: 1px solid currentColor;
 
-      svg {
+      svg.arrow-up-right {
         opacity: 1;
       }
     }
 
     &:visited {
-      color: rebeccapurple;
+      color: ${style.hsl("navy", 64)};
     }
 
 

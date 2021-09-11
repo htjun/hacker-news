@@ -10,7 +10,7 @@ const Story = (props: any) => {
       <StoryTitle>
         <a href={data.url} target="_blank" rel='noreferrer'>
           <span>{data.title}</span>
-          <IconArrowUpRight />
+          <IconArrowUpRight class="arrow-up-right" />
         </a>
       </StoryTitle>
       <StoryInfo>
