@@ -3,7 +3,7 @@ import * as style from 'src/styles/style'
 
 export const InputText = styled.input`
   width: 100%;
-  padding: 4px 0;
+  padding-bottom: 4px;
   border-bottom: 1px solid ${style.hsl("navy", 24)};
   margin-bottom: 48px;
   font-size: ${style.fontSize.sm};

@@ -10,11 +10,11 @@ export const NavWrapper = styled.aside`
 export const SiteName = styled.h1`
   display: flex;
   align-items: baseline;
-  margin-bottom: 48px;
+  margin-bottom: 50px;
   color: ${style.hsl("navy", 24)};
 
   svg {
-    width: 60px;
+    width: 48px;
     fill: currentColor;
   }
 

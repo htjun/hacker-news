@@ -62,10 +62,10 @@ export const StoryDetails = styled.ul`
   display: flex;
   margin-top: 20px;
   font-size: ${style.fontSize.sm};
-  color: ${style.hsl("neutral", 24)};
+  color: ${style.hsl("neutral", 32)};
 
   li {
-    margin-right: 8px;
+    margin-right: 12px;
     display: flex;
     align-items: center;
 
@@ -75,7 +75,7 @@ export const StoryDetails = styled.ul`
       width: 1px;
       height: 12px;
       background-color: ${style.hsl("neutral", 92)};
-      margin-left: 8px;
+      margin-left: 12px;
     }
 
     &:last-of-type::after {
