@@ -4,8 +4,22 @@ import Navigation from 'src/components/Navigation'
 import SearchInput from 'src/components/SearchInput'
 import Stories from 'src/components/Stories'
 
-export async function getStaticProps() {
-  const data = await getStories('/')
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { pid: 'new'} },
+      { params: { pid: 'ask'} },
+      { params: { pid: 'show'} },
+      { params: { pid: 'jobs'} },
+    ],
+    fallback: true
+  };
+}
+
+export async function getStaticProps(context: any) {
+  const { params } = context
+
+  const data = await getStories(`/${params.pid}`)
   return {
     props: {
       data
@@ -13,7 +27,7 @@ export async function getStaticProps() {
   }
 }
 
-const TopStories = ({ data }: any) => {
+const StoriesPage = ({ data }: any) => {
   return (
     <Layout>
       <Navigation />
@@ -25,4 +39,4 @@ const TopStories = ({ data }: any) => {
   )
 }
 
-export default TopStories
+export default StoriesPage

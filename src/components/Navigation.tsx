@@ -40,6 +40,8 @@ const getMenuIcon = (path: string) => {
 
 const Navigation = () => {
   const router = useRouter()
+  const { pid } = router.query
+  const path = pid ? pid : ''
 
   return (
     <NavWrapper>
@@ -52,7 +54,7 @@ const Navigation = () => {
           {menu.map((item, index) => {
             return (
               <NavItem key={index} className={
-                router.pathname === item.path ? `active` : ``
+                `/${path}` === item.path ? `active` : ``
               }>
                 <Link href={item.path}>
                   <a>
