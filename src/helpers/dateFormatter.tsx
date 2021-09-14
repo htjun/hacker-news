@@ -5,7 +5,7 @@ TimeAgo.addDefaultLocale(en)
 const timeAgo = new TimeAgo("en-US")
 
 const dateFormatter = (date: number) => {
-  return timeAgo.format(new Date(date))
+  return timeAgo.format(new Date(date * 1000))
 }
 
 export default dateFormatter
