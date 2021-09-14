@@ -1,5 +1,4 @@
 const baseUrl = "https://hacker-news.firebaseio.com/v0/"
-const topStoriesUrl = `${baseUrl}topstories.json`
 const storyUrl = `${baseUrl}item/`
 
 const getStories = async (path: string) => {
@@ -18,7 +17,7 @@ const getStories = async (path: string) => {
     case "/show":
       fetchUrl = `${baseUrl}showstories.json`
       break;
-    case "/show":
+    case "/jobs":
       fetchUrl = `${baseUrl}jobstories.json`
       break;
     default:
@@ -35,7 +34,9 @@ const getStories = async (path: string) => {
       const storyResponse = await fetch(`${storyUrl}${storyNumber}.json`)
       return storyResponse.json()
     })
-  )
+  ).catch((error) => {
+   console.log(error)
+  })
   return stories
 }
 
