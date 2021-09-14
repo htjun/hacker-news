@@ -18,27 +18,8 @@ export const StoryTitle = styled.h2`
     padding-bottom: 2px;
     transition: all 0.12s;
 
-    svg {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      vertical-align: middle;
-      margin-bottom: 2px;
-    }
-
-    svg.arrow-up-right {
-      margin-left: 4px;
-      fill: currentColor;
-      opacity: 0;
-      transition: opacity 0.12s;
-    }
-
     &:hover {
       border-bottom: 1px solid currentColor;
-
-      svg.arrow-up-right {
-        opacity: 1;
-      }
     }
 
     &:visited {
