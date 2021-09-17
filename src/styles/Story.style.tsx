@@ -39,7 +39,7 @@ export const Url = styled.span`
   color: ${style.hsl("neutral", 48)};
 `
 
-export const StoryDetails = styled.ul`
+export const StoryDetailsContainer = styled.ul`
   display: flex;
   margin-top: 20px;
   font-size: ${style.fontSize.sm};

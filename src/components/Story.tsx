@@ -1,6 +1,21 @@
-import { StoryWrapper, StoryInfo, StoryTitle, Url, StoryDetails } from 'src/styles/Story.style'
+import { StoryWrapper, StoryInfo, StoryTitle, Url, StoryDetailsContainer } from 'src/styles/Story.style'
 import shortenUrl from 'src/helpers/shortenUrl'
 import dateFormatter from 'src/helpers/dateFormatter'
+
+const StoryDetails = ({ data }: any) => {
+  if (data) {
+    return (
+      <StoryDetailsContainer>
+        <li><strong>{data.score}</strong>&nbsp;points</li>
+        <li><strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;comments</li>
+        <li>{dateFormatter(data.time)}</li>
+        <li>by&nbsp;<strong>{data.by}</strong></li>
+      </StoryDetailsContainer>
+    )
+  } else {
+    return null
+  }
+}
 
 const Story = (props: any) => {
   const { data } = props
@@ -18,12 +33,7 @@ const Story = (props: any) => {
             <span></span>
             <Url>{data.url && shortenUrl(data.url)}</Url>
           </StoryInfo>
-          <StoryDetails>
-            <li><strong>{data.score}</strong>&nbsp;points</li>
-            <li><strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;comments</li>
-            <li>{dateFormatter(data.time)}</li>
-            <li>by&nbsp;<strong>{data.by}</strong></li>
-          </StoryDetails>
+          <StoryDetails data={data} />
         </StoryWrapper>
       )
     } else {
@@ -32,12 +42,7 @@ const Story = (props: any) => {
           <StoryTitle>
             {data.title}
           </StoryTitle>
-          <StoryDetails>
-            <li><strong>{data.score}</strong>&nbsp;points</li>
-            <li><strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;comments</li>
-            <li>{dateFormatter(data.time)}</li>
-            <li>by&nbsp;<strong>{data.by}</strong></li>
-          </StoryDetails>
+          <StoryDetails data={data} />
         </StoryWrapper>
       )
     }
