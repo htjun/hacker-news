@@ -1,15 +1,27 @@
-import { StoryWrapper, StoryInfo, StoryTitle, Url, StoryDetailsContainer } from 'src/styles/Story.style'
-import shortenUrl from 'src/helpers/shortenUrl'
-import dateFormatter from 'src/helpers/dateFormatter'
+import {
+  StoryWrapper,
+  StoryInfo,
+  StoryTitle,
+  Url,
+  StoryDetailsContainer,
+} from "src/styles/Story.style"
+import shortenUrl from "src/helpers/shortenUrl"
+import dateFormatter from "src/helpers/dateFormatter"
 
 const StoryDetails = ({ data }: any) => {
   if (data) {
     return (
       <StoryDetailsContainer>
-        <li><strong>{data.score}</strong>&nbsp;points</li>
-        <li><strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;comments</li>
+        <li>
+          <strong>{data.score}</strong>&nbsp;points
+        </li>
+        <li>
+          <strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;comments
+        </li>
         <li>{dateFormatter(data.time)}</li>
-        <li>by&nbsp;<strong>{data.by}</strong></li>
+        <li>
+          by&nbsp;<strong>{data.by}</strong>
+        </li>
       </StoryDetailsContainer>
     )
   } else {
@@ -18,14 +30,14 @@ const StoryDetails = ({ data }: any) => {
 }
 
 const Story = (props: any) => {
-  const { data } = props
+  const { data, showStory } = props
 
   if (data) {
-    if ('url' in data) {
+    if ("url" in data) {
       return (
         <StoryWrapper>
           <StoryTitle>
-            <a href={data.url} target="_blank" rel='noreferrer'>
+            <a href={data.url} target="_blank" rel="noreferrer">
               {data.title}
             </a>
           </StoryTitle>
@@ -40,7 +52,7 @@ const Story = (props: any) => {
       return (
         <StoryWrapper>
           <StoryTitle>
-            {data.title}
+            <a onClick={() => showStory(data.id)}>{data.title}</a>
           </StoryTitle>
           <StoryDetails data={data} />
         </StoryWrapper>
@@ -49,7 +61,6 @@ const Story = (props: any) => {
   } else {
     return null
   }
-
 }
 
 export default Story

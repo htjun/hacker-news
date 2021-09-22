@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import * as style from 'src/styles/style'
+import styled from "styled-components"
+import * as style from "src/styles/style"
 
 export const StoryWrapper = styled.li`
   padding-bottom: 24px;
@@ -14,9 +14,10 @@ export const StoryTitle = styled.h2`
   line-height: ${style.textLineHeight.tight};
 
   a {
-    border-bottom: 1px solid rgba(255,255,255, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
     padding-bottom: 2px;
     transition: all 0.12s;
+    cursor: pointer;
 
     &:hover {
       border-bottom: 1px solid currentColor;
@@ -25,8 +26,6 @@ export const StoryTitle = styled.h2`
     &:visited {
       color: ${style.hsl("navy", 64)};
     }
-
-
   }
 `
 
