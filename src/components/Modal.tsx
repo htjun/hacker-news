@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import styled from "styled-components"
 
-const BgDimmer = styled.div`
+const Overay = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
@@ -17,7 +17,7 @@ const ModalContainer = styled.div`
 `
 
 const Modal = (props: any) => {
-  const { modalOn, hideStory, activeStory } = props
+  const { hideStory, activeStory } = props
   const [currentStory, setCurrentStory] = useState(null)
 
   useEffect(() => {
@@ -34,17 +34,13 @@ const Modal = (props: any) => {
 
   return (
     <>
-      {modalOn && (
-        <BgDimmer onClick={hideStory}>
-          <ModalContainer>
-            {currentStory && (
-              <article
-                dangerouslySetInnerHTML={{ __html: currentStory.text }}
-              />
-            )}
-          </ModalContainer>
-        </BgDimmer>
-      )}
+      <Overay onClick={hideStory}>
+        <ModalContainer>
+          {currentStory && (
+            <article dangerouslySetInnerHTML={{ __html: currentStory.text }} />
+          )}
+        </ModalContainer>
+      </Overay>
     </>
   )
 }

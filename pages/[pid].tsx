@@ -40,11 +40,7 @@ const StoriesPage = ({ data }: any) => {
         <SearchInput />
         <Stories data={data} showStory={showStory} />
       </main>
-      <Modal
-        modalOn={modalOn}
-        hideStory={hideStory}
-        activeStory={activeStory}
-      />
+      {modalOn && <Modal hideStory={hideStory} activeStory={activeStory} />}
     </Layout>
   )
 }
