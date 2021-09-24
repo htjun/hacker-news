@@ -21,13 +21,15 @@ const Modal = (props: any) => {
     <>
       <Overay onClick={hideStory}>
         <ModalContainer>
-          {currentStory && (
+          {currentStory ? (
             <>
               <h1>{currentStory.title}</h1>
               <article
                 dangerouslySetInnerHTML={{ __html: currentStory.text }}
               />
             </>
+          ) : (
+            <div>Loading...</div>
           )}
         </ModalContainer>
       </Overay>
