@@ -1,20 +1,5 @@
 import { useState, useEffect } from "react"
-import styled from "styled-components"
-
-const Overay = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  left: 0;
-  top: 0;
-`
-
-const ModalContainer = styled.div`
-  margin: 48px auto;
-  max-width: 80vw;
-  background-color: #fff;
-`
+import { Overay, ModalContainer } from "src/styles/Modal.style"
 
 const Modal = (props: any) => {
   const { hideStory, activeStory } = props
@@ -37,7 +22,12 @@ const Modal = (props: any) => {
       <Overay onClick={hideStory}>
         <ModalContainer>
           {currentStory && (
-            <article dangerouslySetInnerHTML={{ __html: currentStory.text }} />
+            <>
+              <h1>{currentStory.title}</h1>
+              <article
+                dangerouslySetInnerHTML={{ __html: currentStory.text }}
+              />
+            </>
           )}
         </ModalContainer>
       </Overay>
