@@ -3,7 +3,11 @@ import { Overay, ModalContainer } from "src/styles/Modal.style"
 
 const Modal = (props: any) => {
   const { hideStory, activeStory } = props
-  const [currentStory, setCurrentStory] = useState(null)
+  const [currentStory, setCurrentStory] = useState({
+    id: 0,
+    title: "",
+    text: "",
+  })
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +25,7 @@ const Modal = (props: any) => {
     <>
       <Overay onClick={hideStory}>
         <ModalContainer>
-          {currentStory ? (
+          {currentStory.id !== 0 ? (
             <>
               <h1>{currentStory.title}</h1>
               <article
