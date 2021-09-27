@@ -1,6 +1,8 @@
-import type { AppProps } from 'next/app'
-require('destyle.css')
-import { createGlobalStyle } from "styled-components"
+import type { AppProps } from "next/app"
+import { useState } from "react"
+require("destyle.css")
+import { createGlobalStyle, ThemeProvider } from "styled-components"
+import { darkTheme, lightTheme } from "src/styles/theme"
 import * as style from "src/styles/style"
 
 export const GlobalStyle = createGlobalStyle`
@@ -15,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
+    background-color: ${({ theme }) => theme.background.l1};;
   }
 
   @font-face {
@@ -28,11 +31,13 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [darkMode, setDarkMode] = useState(false)
+
   return (
-    <>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <Component {...pageProps} />
-    </>
+      <Component {...pageProps} setDarkMode={setDarkMode} />
+    </ThemeProvider>
   )
 }
 export default MyApp
