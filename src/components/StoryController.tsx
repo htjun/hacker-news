@@ -2,7 +2,9 @@ import { useState } from "react"
 import {
   ControllerContainer,
   InputText,
+  DarkModeButton,
 } from "src/styles/StoryController.style"
+import IconSun from "src/assets/icons/IconSun.svg"
 
 const StoryController = (props: any) => {
   const { darkMode, setDarkMode } = props
@@ -14,7 +16,9 @@ const StoryController = (props: any) => {
   return (
     <ControllerContainer>
       <InputText type="text" placeholder="Search..." />
-      <input type="checkbox" checked={darkMode} onClick={handleCheckbox} />
+      <DarkModeButton href="" onClick={handleCheckbox}>
+        <IconSun />
+      </DarkModeButton>
     </ControllerContainer>
   )
 }
