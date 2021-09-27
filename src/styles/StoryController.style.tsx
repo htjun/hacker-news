@@ -21,7 +21,7 @@ export const InputText = styled.input`
   }
 `
 
-export const DarkModeButton = styled.a`
+export const DarkModeButton = styled.div`
   display: grid;
   place-items: center;
   width: 32px;

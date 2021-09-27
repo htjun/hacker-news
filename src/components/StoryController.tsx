@@ -16,7 +16,7 @@ const StoryController = (props: any) => {
   return (
     <ControllerContainer>
       <InputText type="text" placeholder="Search..." />
-      <DarkModeButton href="" onClick={handleCheckbox}>
+      <DarkModeButton onClick={handleCheckbox}>
         <IconSun />
       </DarkModeButton>
     </ControllerContainer>
