@@ -1,5 +1,9 @@
-import styled from 'styled-components'
-import * as style from 'src/styles/style'
+import styled from "styled-components"
+import * as style from "src/styles/style"
+
+export const ControllerContainer = styled.div`
+  display: flex;
+`
 
 export const InputText = styled.input`
   width: 100%;
