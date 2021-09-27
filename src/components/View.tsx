@@ -7,13 +7,13 @@ import useStoryViewer from "src/hooks/useStoryViewer"
 
 const View = (props: any) => {
   const { modalOn, showStory, hideStory, activeStory } = useStoryViewer()
-  const { data, setDarkMode } = props
+  const { data, darkMode, setDarkMode } = props
 
   return (
     <Layout>
       <Navigation />
       <main>
-        <StoryController setDarkMode={setDarkMode} />
+        <StoryController darkMode={darkMode} setDarkMode={setDarkMode} />
         <Stories data={data} showStory={showStory} />
       </main>
       {modalOn && <Modal hideStory={hideStory} activeStory={activeStory} />}

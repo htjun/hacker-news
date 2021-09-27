@@ -11,8 +11,10 @@ export async function getStaticProps() {
   }
 }
 
-const TopStories = ({ data }: any) => {
-  return <View data={data} />
+const TopStories = (props: any) => {
+  const { data, darkMode, setDarkMode } = props
+
+  return <View data={data} darkMode={darkMode} setDarkMode={setDarkMode} />
 }
 
 export default TopStories

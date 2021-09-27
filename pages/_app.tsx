@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    background-color: ${({ theme }) => theme.background.l1};;
+    background-color: ${({ theme }) => theme.background.l1};
   }
 
   @font-face {
@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <Component {...pageProps} setDarkMode={setDarkMode} />
+      <Component {...pageProps} darkMode={darkMode} setDarkMode={setDarkMode} />
     </ThemeProvider>
   )
 }

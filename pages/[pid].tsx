@@ -26,9 +26,9 @@ export async function getStaticProps(context: any) {
 }
 
 const StoriesPage = (props: any) => {
-  const { data, setDarkMode } = props
+  const { data, darkMode, setDarkMode } = props
 
-  return <View data={data} setDarkMode={setDarkMode} />
+  return <View data={data} darkMode={darkMode} setDarkMode={setDarkMode} />
 }
 
 export default StoriesPage

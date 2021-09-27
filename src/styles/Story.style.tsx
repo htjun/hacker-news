@@ -3,7 +3,7 @@ import * as style from "src/styles/style"
 
 export const StoryWrapper = styled.li`
   padding-bottom: 24px;
-  border-bottom: 1px solid ${style.hsl("neutral", 92)};
+  border-bottom: 1px solid ${({ theme }) => theme.background.l4};
   margin-bottom: 24px;
 `
 
@@ -12,6 +12,7 @@ export const StoryTitle = styled.h2`
   font-size: ${style.fontSize.lg};
   font-weight: ${style.fontWeight.bold};
   line-height: ${style.textLineHeight.tight};
+  color: ${({ theme }) => theme.text.neutral.l1};
 
   a {
     border-bottom: 1px solid rgba(255, 255, 255, 0);
@@ -35,14 +36,14 @@ export const StoryInfo = styled.div`
 
 export const Url = styled.span`
   font-size: ${style.fontSize.sm};
-  color: ${style.hsl("neutral", 48)};
+  color: ${({ theme }) => theme.text.neutral.l3};
 `
 
 export const StoryDetailsContainer = styled.ul`
   display: flex;
   margin-top: 20px;
   font-size: ${style.fontSize.sm};
-  color: ${style.hsl("neutral", 32)};
+  color: ${({ theme }) => theme.text.neutral.l2};
 
   li {
     margin-right: 12px;
@@ -54,7 +55,7 @@ export const StoryDetailsContainer = styled.ul`
       display: block;
       width: 1px;
       height: 12px;
-      background-color: ${style.hsl("neutral", 92)};
+      background-color: ${({ theme }) => theme.background.l4};
       margin-left: 12px;
     }
 

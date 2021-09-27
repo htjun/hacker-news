@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import * as style from 'src/styles/style'
+import styled from "styled-components"
+import * as style from "src/styles/style"
 
 export const NavWrapper = styled.aside`
   display: block;
@@ -11,7 +11,7 @@ export const SiteName = styled.h1`
   display: flex;
   align-items: baseline;
   margin-bottom: 50px;
-  color: ${style.hsl("navy", 24)};
+  color: ${({ theme }) => theme.background.l5};
 
   svg {
     width: 48px;
@@ -44,7 +44,7 @@ export const NavItem = styled.li`
     font-size: ${style.fontSize.sm};
     font-weight: ${style.fontWeight.medium};
     line-height: ${style.textLineHeight.normal};
-    color: ${style.hsl("neutral", 64)};
+    color: ${({ theme }) => theme.text.neutral.l4};
     transition: all 0.08s linear;
 
     svg {
@@ -56,15 +56,15 @@ export const NavItem = styled.li`
     }
 
     &:hover {
-      color: ${style.hsl("neutral", 32)};
-      background-color: ${style.hsl("neutral", 98)};
+      color: ${({ theme }) => theme.text.neutral.l2};
+      background-color: ${({ theme }) => theme.background.l2};
     }
   }
 
   &.active {
     a {
-      color: ${style.hsl("blue",16)};
-      background-color: ${style.hsl("navy", 96)};
+      color: ${({ theme }) => theme.text.navy.l1};
+      background-color: ${({ theme }) => theme.background.l3};
     }
   }
 `

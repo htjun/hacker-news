@@ -9,6 +9,7 @@ export const InputText = styled.input`
   width: 100%;
   padding-bottom: 4px;
   border-bottom: 1px solid ${style.hsl("navy", 24)};
+  border-bottom: 1px solid ${({ theme }) => theme.background.l5};
   margin-bottom: 48px;
   font-size: ${style.fontSize.sm};
   line-height: ${style.textLineHeight.normal};

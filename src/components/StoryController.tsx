@@ -5,18 +5,16 @@ import {
 } from "src/styles/StoryController.style"
 
 const StoryController = (props: any) => {
-  const { setDarkMode } = props
-  const [checked, setChecked] = useState(false)
+  const { darkMode, setDarkMode } = props
 
   const handleCheckbox = () => {
-    setChecked(!checked)
-    setDarkMode(!checked)
+    setDarkMode(!darkMode)
   }
 
   return (
     <ControllerContainer>
       <InputText type="text" placeholder="Search..." />
-      <input type="checkbox" checked={checked} onClick={handleCheckbox} />
+      <input type="checkbox" checked={darkMode} onClick={handleCheckbox} />
     </ControllerContainer>
   )
 }
