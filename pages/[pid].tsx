@@ -1,5 +1,5 @@
 import getStories from "src/helpers/getStories"
-import View from "src/components/View"
+import ListView from "src/components/ListView"
 
 export async function getStaticPaths() {
   return {
@@ -28,7 +28,7 @@ export async function getStaticProps(context: any) {
 const StoriesPage = (props: any) => {
   const { data, darkMode, setDarkMode } = props
 
-  return <View data={data} darkMode={darkMode} setDarkMode={setDarkMode} />
+  return <ListView data={data} darkMode={darkMode} setDarkMode={setDarkMode} />
 }
 
 export default StoriesPage

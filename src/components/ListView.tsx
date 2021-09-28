@@ -1,24 +1,24 @@
 import Layout from "src/components/Layout"
+import SiteName from "./SiteName"
 import Navigation from "src/components/Navigation"
 import StoryController from "src/components/StoryController"
 import Stories from "src/components/Stories"
-import Modal from "src/components/Modal"
-import useStoryViewer from "src/hooks/useStoryViewer"
 
-const View = (props: any) => {
-  const { modalOn, showStory, hideStory, activeStory } = useStoryViewer()
+const ListView = (props: any) => {
   const { data, darkMode, setDarkMode } = props
 
   return (
     <Layout>
-      <Navigation />
+      <aside>
+        <SiteName />
+        <Navigation />
+      </aside>
       <main>
         <StoryController darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Stories data={data} showStory={showStory} />
+        <Stories data={data} />
       </main>
-      {modalOn && <Modal hideStory={hideStory} activeStory={activeStory} />}
     </Layout>
   )
 }
 
-export default View
+export default ListView

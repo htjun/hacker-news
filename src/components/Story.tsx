@@ -1,3 +1,4 @@
+import Link from "next/link"
 import {
   StoryWrapper,
   StoryInfo,
@@ -30,7 +31,7 @@ const StoryDetails = ({ data }: any) => {
 }
 
 const Story = (props: any) => {
-  const { data, showStory } = props
+  const { data } = props
 
   if (data) {
     if ("url" in data) {
@@ -52,7 +53,7 @@ const Story = (props: any) => {
       return (
         <StoryWrapper>
           <StoryTitle>
-            <a onClick={() => showStory(data.id)}>{data.title}</a>
+            <Link href={`/s/${data.id}`}>{data.title}</Link>
           </StoryTitle>
           <StoryDetails data={data} />
         </StoryWrapper>
