@@ -18,12 +18,14 @@ export const NavItem = styled.li`
     font-weight: ${style.fontWeight.medium};
     line-height: ${style.textLineHeight.normal};
     color: ${({ theme }) => theme.text.neutral.l4};
+    cursor: pointer;
     transition: all 0.08s linear;
 
     svg {
       width: 16px;
       height: 16px;
       margin-right: 8px;
+      margin-bottom: -1px;
       fill: currentColor;
       opacity: 0.8;
     }
