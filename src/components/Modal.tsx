@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { Overay, ModalContainer } from "src/styles/Modal.style"
+import { useState, useEffect, useRef } from "react"
+import { Overlay, ModalContainer } from "src/styles/Modal.style"
 
 const Modal = (props: any) => {
   const { hideStory, activeStory } = props
@@ -8,6 +8,7 @@ const Modal = (props: any) => {
     title: "",
     text: "",
   })
+  const modalRef = useRef()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,10 +22,25 @@ const Modal = (props: any) => {
     fetchData()
   }, [activeStory])
 
+  const handleClick = (e: any) => {
+    if (modalRef.current.contains(e.target)) {
+      return
+    }
+    hideStory()
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClick)
+
+    return () => {
+      document.removeEventListener("mousedown", handleClick)
+    }
+  }, [])
+
   return (
     <>
-      <Overay onClick={hideStory}>
-        <ModalContainer>
+      <Overlay>
+        <ModalContainer ref={modalRef}>
           {currentStory.id !== 0 ? (
             <>
               <h1>{currentStory.title}</h1>
@@ -36,7 +52,7 @@ const Modal = (props: any) => {
             <div>Loading...</div>
           )}
         </ModalContainer>
-      </Overay>
+      </Overlay>
     </>
   )
 }
