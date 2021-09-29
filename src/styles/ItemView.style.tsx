@@ -59,5 +59,6 @@ export const CommentsContainer = styled.section`
     font-family: ${style.fontSet.heading};
     font-size: ${style.fontSize.lg};
     font-weight: ${style.fontWeight.bold};
+    margin-bottom: 24px;
   }
 `

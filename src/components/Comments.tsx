@@ -1,5 +1,6 @@
 import useSWR from "swr"
-import { CommentContainer } from "src/styles/Comments.style"
+import dateFormatter from "src/helpers/dateFormatter"
+import { CommentContainer, Commenter } from "src/styles/Comments.style"
 
 const baseUrl = `https://hacker-news.firebaseio.com/v0/item/`
 
@@ -12,7 +13,15 @@ const Comment = ({ commentId }: any) => {
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>
 
-  return <CommentContainer dangerouslySetInnerHTML={{ __html: data.text }} />
+  return (
+    <CommentContainer>
+      <article dangerouslySetInnerHTML={{ __html: data.text }} />
+      <Commenter>
+        Posted&nbsp;{dateFormatter(data.time)}&nbsp;by&nbsp;
+        <strong>{data.by}</strong>
+      </Commenter>
+    </CommentContainer>
+  )
 }
 
 const Comments = (props: any) => {
