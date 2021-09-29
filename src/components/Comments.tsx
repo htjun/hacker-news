@@ -16,6 +16,7 @@ const Comment = ({ commentId }: any) => {
 
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>
+  if (!data.text) return <></>
 
   return (
     <>
@@ -46,7 +47,7 @@ const Comments = (props: any) => {
       <CommentsContainer>
         {data &&
           data.map((commentId: any) => {
-            return <Comment commentId={commentId} />
+            return <Comment key={commentId} commentId={commentId} />
           })}
       </CommentsContainer>
     </>
