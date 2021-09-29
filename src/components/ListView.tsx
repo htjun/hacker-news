@@ -1,5 +1,5 @@
 import Layout from "src/components/Layout"
-import SiteName from "./SiteName"
+import SiteName from "src/components/SiteName"
 import Navigation from "src/components/Navigation"
 import StoryController from "src/components/StoryController"
 import Stories from "src/components/Stories"
