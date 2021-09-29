@@ -6,7 +6,8 @@ export const lightTheme = {
     l2: style.hsl("neutral", 98),
     l3: style.hsl("neutral", 96),
     l4: style.hsl("neutral", 92),
-    l5: style.hsl("navy", 24),
+    l5: style.hsl("neutral", 80),
+    l9: style.hsl("navy", 24),
   },
   text: {
     neutral: {
@@ -28,7 +29,8 @@ export const darkTheme = {
     l2: style.hsl("neutral", 8),
     l3: style.hsl("neutral", 16),
     l4: style.hsl("neutral", 24),
-    l5: style.hsl("neutral", 92),
+    l5: style.hsl("neutral", 32),
+    l9: style.hsl("neutral", 92),
   },
   text: {
     neutral: {

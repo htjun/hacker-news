@@ -5,7 +5,7 @@ export const SiteNameContainer = styled.h1`
   display: flex;
   align-items: baseline;
   margin-bottom: 50px;
-  color: ${({ theme }) => theme.background.l5};
+  color: ${({ theme }) => theme.background.l9};
 
   svg {
     width: 48px;

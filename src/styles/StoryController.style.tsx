@@ -8,7 +8,7 @@ export const ControllerContainer = styled.div`
 export const InputText = styled.input`
   width: 100%;
   padding-bottom: 4px;
-  border-bottom: 1px solid ${({ theme }) => theme.background.l5};
+  border-bottom: 1px solid ${({ theme }) => theme.background.l9};
   margin-bottom: 48px;
   font-size: ${style.fontSize.sm};
   line-height: ${style.textLineHeight.normal};
@@ -37,6 +37,6 @@ export const DarkModeButton = styled.div`
   svg {
     width: 24px;
     height: 24px;
-    fill: ${({ theme }) => theme.background.l5};
+    fill: ${({ theme }) => theme.background.l9};
   }
 `
