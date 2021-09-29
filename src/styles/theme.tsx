@@ -19,6 +19,7 @@ export const lightTheme = {
     navy: {
       l1: style.hsl("navy", 16),
       l2: style.hsl("navy", 24),
+      l3: style.hsl("navy", 32),
     },
   },
 }
@@ -42,6 +43,7 @@ export const darkTheme = {
     navy: {
       l1: style.hsl("navy", 80),
       l2: style.hsl("navy", 72),
+      l3: style.hsl("navy", 64),
     },
   },
 }
