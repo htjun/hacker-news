@@ -5,6 +5,7 @@ import {
   DarkModeButton,
 } from "src/styles/StoryController.style"
 import IconSun from "src/assets/icons/IconSun.svg"
+import IconMoon from "src/assets/icons/IconMoon.svg"
 
 const StoryController = (props: any) => {
   const { darkMode, setDarkMode } = props
@@ -17,7 +18,7 @@ const StoryController = (props: any) => {
     <ControllerContainer>
       <InputText type="text" placeholder="Search..." />
       <DarkModeButton onClick={handleCheckbox}>
-        <IconSun />
+        {darkMode ? <IconSun /> : <IconMoon />}
       </DarkModeButton>
     </ControllerContainer>
   )
