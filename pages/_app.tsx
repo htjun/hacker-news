@@ -11,11 +11,8 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  html {
-    font-family: ${style.fontSet.sans};
-  }
-
   body {
+    font-family: ${style.fontSet.sans};
     overflow-x: hidden;
     background-color: ${({ theme }) => theme.background.l1};
   }
@@ -26,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     src: url('fonts/raf-bold.eot?#iefix') format('embedded-opentype'), url('fonts/raf-bold.woff2') format('woff2'), url('fonts/raf-bold.woff') format('woff');
     font-weight: 700;
     font-style: bold;
-    font-display: swap;
+    font-display: block;
   }
 `
 
