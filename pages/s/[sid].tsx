@@ -17,8 +17,8 @@ export async function getServerSideProps(context: any) {
 }
 
 const StoryPage = (props: any) => {
-  const { data } = props
-  return <ItemView data={data} />
+  const { data, darkMode, setDarkMode } = props
+  return <ItemView data={data} darkMode={darkMode} setDarkMode={setDarkMode} />
 }
 
 export default StoryPage
