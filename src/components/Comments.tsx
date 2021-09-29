@@ -1,6 +1,10 @@
 import useSWR from "swr"
 import dateFormatter from "src/helpers/dateFormatter"
-import { CommentContainer, Commenter } from "src/styles/Comments.style"
+import {
+  CommentsContainer,
+  CommentContainer,
+  Commenter,
+} from "src/styles/Comments.style"
 
 const baseUrl = `https://hacker-news.firebaseio.com/v0/item/`
 
@@ -14,13 +18,23 @@ const Comment = ({ commentId }: any) => {
   if (!data) return <div>loading...</div>
 
   return (
-    <CommentContainer>
-      <article dangerouslySetInnerHTML={{ __html: data.text }} />
-      <Commenter>
-        Posted&nbsp;{dateFormatter(data.time)}&nbsp;by&nbsp;
-        <strong>{data.by}</strong>
-      </Commenter>
-    </CommentContainer>
+    <>
+      <CommentContainer>
+        <article dangerouslySetInnerHTML={{ __html: data.text }} />
+        <Commenter>
+          Posted&nbsp;{dateFormatter(data.time)}&nbsp;by&nbsp;
+          <strong>{data.by}</strong>
+        </Commenter>
+        {data.kids && (
+          <details open={true}>
+            <summary>
+              <strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;comments
+            </summary>
+            <Comments data={data.kids} />
+          </details>
+        )}
+      </CommentContainer>
+    </>
   )
 }
 
@@ -29,12 +43,12 @@ const Comments = (props: any) => {
 
   return (
     <>
-      <ul>
+      <CommentsContainer>
         {data &&
           data.map((commentId: any) => {
             return <Comment commentId={commentId} />
           })}
-      </ul>
+      </CommentsContainer>
     </>
   )
 }

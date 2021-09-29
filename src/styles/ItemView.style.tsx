@@ -52,7 +52,7 @@ export const ItemContainer = styled.div`
   }
 `
 
-export const CommentsContainer = styled.section`
+export const ItemComments = styled.section`
   color: ${({ theme }) => theme.text.neutral.l1};
 
   h2 {
@@ -60,5 +60,9 @@ export const CommentsContainer = styled.section`
     font-size: ${style.fontSize.lg};
     font-weight: ${style.fontWeight.bold};
     margin-bottom: 24px;
+  }
+
+  & > ul {
+    padding-left: 0;
   }
 `
