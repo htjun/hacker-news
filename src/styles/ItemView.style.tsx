@@ -2,6 +2,7 @@ import styled from "styled-components"
 import * as style from "src/styles/style"
 
 export const ItemContainer = styled.div`
+  margin-bottom: 48px;
   color: ${({ theme }) => theme.text.neutral.l1};
 
   h1 {
@@ -48,5 +49,15 @@ export const ItemContainer = styled.div`
     p {
       margin: 1em 0;
     }
+  }
+`
+
+export const CommentsContainer = styled.section`
+  color: ${({ theme }) => theme.text.neutral.l1};
+
+  h2 {
+    font-family: ${style.fontSet.heading};
+    font-size: ${style.fontSize.lg};
+    font-weight: ${style.fontWeight.bold};
   }
 `
