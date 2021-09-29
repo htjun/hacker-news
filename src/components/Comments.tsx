@@ -1,25 +1,33 @@
+import useSWR from "swr"
+import { CommentContainer } from "src/styles/Comments.style"
+
 const baseUrl = `https://hacker-news.firebaseio.com/v0/item/`
 
-const Comments = () => {
-  return <></>
+// @ts-ignore
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
+
+const Comment = ({ commentId }: any) => {
+  const { data, error } = useSWR(`${baseUrl}${commentId}.json`, fetcher)
+
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  return <CommentContainer dangerouslySetInnerHTML={{ __html: data.text }} />
 }
 
-const Comment = () => {
-  return <></>
-}
-
-const CommentsContainer = (props: any) => {
+const Comments = (props: any) => {
   const { data } = props
 
   return (
     <>
-      <div>
-        {data.map((comment: any) => {
-          return <div>{comment}</div>
-        })}
-      </div>
+      <ul>
+        {data &&
+          data.map((commentId: any) => {
+            return <Comment commentId={commentId} />
+          })}
+      </ul>
     </>
   )
 }
 
-export default CommentsContainer
+export default Comments
