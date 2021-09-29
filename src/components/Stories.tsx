@@ -6,9 +6,10 @@ const Stories = (props: any) => {
 
   return (
     <StoriesWrapper>
-      {data.map((item: any, index: number) => {
-        return <Story key={item ? item.id : index} data={item && item} />
-      })}
+      {data &&
+        data.map((item: any, index: number) => {
+          return <Story key={item ? item.id : index} data={item && item} />
+        })}
     </StoriesWrapper>
   )
 }

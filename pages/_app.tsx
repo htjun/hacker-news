@@ -5,7 +5,9 @@ import { createGlobalStyle, ThemeProvider } from "styled-components"
 import { darkTheme, lightTheme } from "src/styles/theme"
 import * as style from "src/styles/style"
 
-export const GlobalStyle = createGlobalStyle`
+type ThemeType = typeof lightTheme
+
+export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -1,3 +1,4 @@
+import { DefaultTheme } from "styled-components"
 import * as style from "src/styles/style"
 
 export const lightTheme = {

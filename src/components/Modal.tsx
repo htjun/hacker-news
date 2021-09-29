@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { Overlay, ModalContainer } from "src/styles/Modal.style"
 
 const Modal = (props: any) => {
@@ -8,7 +8,6 @@ const Modal = (props: any) => {
     title: "",
     text: "",
   })
-  const modalRef = useRef()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +22,7 @@ const Modal = (props: any) => {
   }, [activeStory])
 
   const handleClick = (e: any) => {
+    // @ts-ignore
     if (modalRef.current.contains(e.target)) {
       return
     }
@@ -40,7 +40,7 @@ const Modal = (props: any) => {
   return (
     <>
       <Overlay>
-        <ModalContainer ref={modalRef}>
+        <ModalContainer>
           {currentStory.id !== 0 ? (
             <>
               <h1>{currentStory.title}</h1>
