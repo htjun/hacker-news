@@ -2,10 +2,17 @@ import styled from "styled-components"
 import * as style from "src/styles/style"
 
 export const SiteNameContainer = styled.h1`
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 50px;
-  color: ${({ theme }) => theme.background.l9};
+  a {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 50px;
+    color: ${({ theme }) => theme.background.l9};
+    transition: opacity 0.08s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 
   svg {
     width: 48px;
