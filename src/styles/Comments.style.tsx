@@ -39,5 +39,5 @@ export const Commenter = styled.div`
   margin-top: 24px;
   margin-bottom: 16px;
   font-size: ${style.fontSize.sm};
-  color: ${({ theme }) => theme.text.navy.l2};
+  color: ${({ theme }) => theme.text.navy.l3};
 `
