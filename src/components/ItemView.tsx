@@ -4,7 +4,7 @@ import SiteName from "src/components/SiteName"
 import StoryController from "src/components/StoryController"
 import Comments from "src/components/Comments"
 import dateFormatter from "src/helpers/dateFormatter"
-import { NavItem } from "src/styles/Navigation.style"
+import { NavContainer, NavItem } from "src/styles/Navigation.style"
 import { ItemContainer, ItemComments } from "src/styles/ItemView.style"
 import IconArrowLeft from "src/assets/icons/IconArrowLeft.svg"
 
@@ -16,12 +16,14 @@ const ItemView = (props: any) => {
     <Layout>
       <aside>
         <SiteName />
-        <NavItem as="div">
-          <a onClick={() => router.back()}>
-            <IconArrowLeft />
-            <span>Back to list</span>
-          </a>
-        </NavItem>
+        <NavContainer>
+          <NavItem as="div">
+            <a onClick={() => router.back()}>
+              <IconArrowLeft />
+              <span>Back to list</span>
+            </a>
+          </NavItem>
+        </NavContainer>
       </aside>
       <main>
         <StoryController darkMode={darkMode} setDarkMode={setDarkMode} />
