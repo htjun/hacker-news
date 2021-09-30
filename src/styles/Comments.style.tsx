@@ -5,10 +5,10 @@ export const CommentsContainer = styled.ul`
   padding-left: 16px;
 
   details {
-    font-size: ${style.fontSize.sm};
     color: ${({ theme }) => theme.text.neutral.l3};
 
     summary {
+      font-size: ${style.fontSize.sm};
       margin-bottom: 16px;
       cursor: pointer;
 
