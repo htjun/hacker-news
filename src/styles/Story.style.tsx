@@ -63,6 +63,10 @@ export const StoryDetailsContainer = styled.ul`
       display: none;
     }
 
+    a {
+      ${style.LinkStyle}
+    }
+
     strong {
       font-weight: ${style.fontWeight.semibold};
     }

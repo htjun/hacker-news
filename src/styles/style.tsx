@@ -1,3 +1,5 @@
+import styled, { css } from "styled-components"
+
 // Color
 export const hsl = (color: string, lightness: number) => {
   let hs: string
@@ -5,16 +7,16 @@ export const hsl = (color: string, lightness: number) => {
   switch (color) {
     case "neutral":
       hs = "216, 8%"
-      break;
+      break
     case "navy":
       hs = "220, 16%"
-      break;
+      break
     case "blue":
       hs = "224, 64%"
-      break;
+      break
     default:
       hs = "216, 8%"
-      break;
+      break
   }
   return `hsl(${hs}, ${lightness}%)`
 }
@@ -27,16 +29,16 @@ export const fontSet = {
 }
 
 export const fontSize = {
-  xs: '0.75rem',
-  sm: '0.875rem',
-  base: '1rem',
-  lg: '1.125rem',
-  xl: '1.25rem',
-  xl2: '1.5rem',
-  xl3: '2rem',
-  xl4: '2.5rem',
-  xl5: '3rem',
-  xl6: '3.25rem',
+  xs: "0.75rem",
+  sm: "0.875rem",
+  base: "1rem",
+  lg: "1.125rem",
+  xl: "1.25rem",
+  xl2: "1.5rem",
+  xl3: "2rem",
+  xl4: "2.5rem",
+  xl5: "3rem",
+  xl6: "3.25rem",
 }
 
 export const fontWeight = {
@@ -54,8 +56,22 @@ export const textLineHeight = {
 }
 
 export const textLetterSpacing = {
-  tighter: '-0.04em',
-  tight: '-0.025em',
+  tighter: "-0.04em",
+  tight: "-0.025em",
   normal: 0,
-  loose: '0.025em',
+  loose: "0.025em",
 }
+
+// Custom styles
+export const LinkStyle = css`
+  display: block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: all 0.16s linear 0s;
+
+  &:hover {
+    color: ${({ theme }) => theme.text.neutral.l1};
+    background-color: ${({ theme }) => theme.background.l3};
+  }
+`
