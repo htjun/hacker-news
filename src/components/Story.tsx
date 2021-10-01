@@ -17,7 +17,11 @@ const StoryDetails = ({ data }: any) => {
           <strong>{data.score}</strong>&nbsp;points
         </li>
         <li>
-          <strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;comments
+          <Link href={`/s/${data.id}`}>
+            <a>
+              <strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;comments
+            </a>
+          </Link>
         </li>
         <li>{dateFormatter(data.time)}</li>
         <li>
