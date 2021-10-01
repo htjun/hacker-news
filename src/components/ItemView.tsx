@@ -38,7 +38,9 @@ const ItemView = (props: any) => {
               <strong>{data.score}</strong>&nbsp;points
             </li>
           </ul>
-          <article dangerouslySetInnerHTML={{ __html: data.text }} />
+          {data.text && (
+            <article dangerouslySetInnerHTML={{ __html: data.text }} />
+          )}
         </ItemContainer>
         <ItemComments>
           <h2>
