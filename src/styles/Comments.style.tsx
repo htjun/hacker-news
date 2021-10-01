@@ -26,8 +26,10 @@ export const CommentContainer = styled.li`
   color: ${({ theme }) => theme.text.neutral.l1};
   line-height: ${style.textLineHeight.normal};
 
-  p {
+  p,
+  pre {
     margin: 1em 0;
+    white-space: normal;
   }
 
   a {
