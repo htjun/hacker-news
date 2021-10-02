@@ -7,6 +7,8 @@ export const LayoutOuter = styled.div`
 
 export const LayoutInner = styled.div`
   display: flex;
+  width: 100%;
+  max-width: 900px;
   margin: 48px;
 
   aside {
@@ -18,6 +20,5 @@ export const LayoutInner = styled.div`
   main {
     display: block;
     width: 100%;
-    max-width: 600px;
   }
 `
