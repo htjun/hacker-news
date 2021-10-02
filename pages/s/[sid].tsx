@@ -1,4 +1,4 @@
-import Layout from "src/components/Layout"
+import Head from "next/head"
 import ItemView from "src/components/ItemView"
 
 const baseUrl = "https://hacker-news.firebaseio.com/v0/item/"
@@ -18,7 +18,14 @@ export async function getServerSideProps(context: any) {
 
 const StoryPage = (props: any) => {
   const { data, darkMode, setDarkMode } = props
-  return <ItemView data={data} darkMode={darkMode} setDarkMode={setDarkMode} />
+  return (
+    <>
+      <Head>
+        <title>HN – {data.title}</title>
+      </Head>
+      <ItemView data={data} darkMode={darkMode} setDarkMode={setDarkMode} />
+    </>
+  )
 }
 
 export default StoryPage
