@@ -13,12 +13,13 @@ export const LayoutInner = styled.div`
 
   aside {
     display: block;
-    width: 200px;
+    min-width: 200px;
     margin-right: 64px;
   }
 
   main {
     display: block;
     width: 100%;
+    flex-grow: 1;
   }
 `
