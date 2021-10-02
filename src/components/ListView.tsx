@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Layout from "src/components/Layout"
 import SiteName from "src/components/SiteName"
 import Navigation from "src/components/Navigation"
@@ -6,6 +7,7 @@ import Stories from "src/components/Stories"
 
 const ListView = (props: any) => {
   const { data, darkMode, setDarkMode } = props
+  const [searchTerm, setSearchTerm] = useState("")
 
   return (
     <Layout>
@@ -14,8 +16,13 @@ const ListView = (props: any) => {
         <Navigation />
       </aside>
       <main>
-        <StoryController darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Stories data={data} />
+        <StoryController
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
+        <Stories data={data} searchTerm={searchTerm} />
       </main>
     </Layout>
   )
