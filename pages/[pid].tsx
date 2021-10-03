@@ -19,7 +19,7 @@ export async function getStaticProps(context: any) {
   const { params } = context
 
   const data = await getStories(`/${params.pid}`)
-  const title: string = getPageTitle(params.pid)
+  const title: string = getPageTitle(params.pid) ?? "HN"
 
   return {
     props: {
