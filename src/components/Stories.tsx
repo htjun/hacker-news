@@ -9,7 +9,11 @@ const Stories = (props: any) => {
       {data &&
         data
           .filter((d: any) => {
-            return d.title.toLowerCase().search(searchTerm.toLowerCase()) != -1
+            if (d) {
+              return (
+                d.title.toLowerCase().search(searchTerm.toLowerCase()) != -1
+              )
+            }
           })
           .map((item: any, index: number) => {
             return <Story key={item ? item.id : index} data={item && item} />
