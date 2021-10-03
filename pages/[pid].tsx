@@ -19,24 +19,24 @@ export async function getStaticProps(context: any) {
   const { params } = context
 
   const data = await getStories(`/${params.pid}`)
-  const title: string = getPageTitle(params.pid) ?? "HN"
+  const pageTitle: string = getPageTitle(params.pid) ?? "HN"
 
   return {
     props: {
       data,
-      title,
+      pageTitle,
     },
     revalidate: 10,
   }
 }
 
 const StoriesPage = (props: any) => {
-  const { data, title, darkMode, setDarkMode } = props
+  const { data, pageTitle, darkMode, setDarkMode } = props
 
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{pageTitle}</title>
       </Head>
       <ListView data={data} darkMode={darkMode} setDarkMode={setDarkMode} />
     </>
