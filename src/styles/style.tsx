@@ -66,6 +66,8 @@ export const textLetterSpacing = {
 export const LinkStyle = css`
   display: block;
   padding: 4px 8px;
+  margin-left: -8px;
+  margin-right: -8px;
   border-radius: 6px;
   background-color: transparent;
   transition: all 0.16s linear 0s;
