@@ -17,6 +17,10 @@ export const SiteNameContainer = styled.h1`
   svg {
     width: 48px;
     fill: currentColor;
+
+    @media ${style.deviceSize.tablet} {
+      width: clamp(24px, 10vw, 48px);
+    }
   }
 
   s {
@@ -26,5 +30,9 @@ export const SiteNameContainer = styled.h1`
     margin-top: -1px;
     margin-left: -2px;
     background-color: currentColor;
+
+    @media ${style.deviceSize.tablet} {
+      display: none;
+    }
   }
 `

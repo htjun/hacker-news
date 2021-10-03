@@ -43,11 +43,10 @@ const Story = (props: any) => {
         <StoryWrapper>
           <StoryTitle>
             <a href={data.url} target="_blank" rel="noreferrer">
-              {data.title}
+              {"title" in data && data.title}
             </a>
           </StoryTitle>
           <StoryInfo>
-            <span></span>
             <Url>{data.url && shortenUrl(data.url)}</Url>
           </StoryInfo>
           <StoryDetails data={data} />

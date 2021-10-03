@@ -4,6 +4,10 @@ import * as style from "src/styles/style"
 export const NavContainer = styled.nav`
   position: sticky;
   top: 48px;
+
+  @media ${style.deviceSize.tablet} {
+    position: inherit;
+  }
 `
 
 export const NavItem = styled.li`

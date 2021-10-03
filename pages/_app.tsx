@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   body {
+    min-width: 320px;
     font-family: ${style.fontSet.sans};
     overflow-x: hidden;
     background-color: ${({ theme }) => theme.background.l1};

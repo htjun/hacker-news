@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import * as style from "src/styles/style"
 
 export const LayoutOuter = styled.div`
   display: grid;
@@ -8,18 +9,27 @@ export const LayoutOuter = styled.div`
 export const LayoutInner = styled.div`
   display: flex;
   width: 100%;
-  max-width: 900px;
-  margin: 48px;
+  max-width: 1000px;
+  padding: 48px;
 
   aside {
     display: block;
-    min-width: 200px;
+    flex: 0 0 200px;
     margin-right: 64px;
+
+    @media ${style.deviceSize.tablet} {
+      margin-right: 0;
+    }
   }
 
   main {
     display: block;
     width: 100%;
     flex-grow: 1;
+  }
+
+  @media ${style.deviceSize.tablet} {
+    flex-direction: column;
+    padding: 24px;
   }
 `
