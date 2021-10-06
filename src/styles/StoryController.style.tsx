@@ -39,4 +39,15 @@ export const DarkModeButton = styled.div`
     height: 24px;
     fill: ${({ theme }) => theme.background.l9};
   }
+
+  @media ${style.deviceSize.tablet} {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+
+  @media ${style.deviceSize.phablet} {
+    top: 16px;
+    right: 16px;
+  }
 `

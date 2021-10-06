@@ -8,11 +8,11 @@ import IconMegaphone from "src/assets/icons/IconMegaphone.svg"
 import IconSparkle from "src/assets/icons/IconSparkle.svg"
 
 const menu = [
-  { title: "Top stories", path: "/" },
-  { title: "New stories", path: "/new" },
-  { title: "Ask HN", path: "/ask" },
-  { title: "Show HN", path: "/show" },
-  { title: "Jobs", path: "/jobs" },
+  { title: "Top", suffix: "stories", path: "/" },
+  { title: "New", suffix: "stories", path: "/new" },
+  { title: "Ask", suffix: "HN", path: "/ask" },
+  { title: "Show", suffix: "HN", path: "/show" },
+  { title: "Jobs", suffix: "", path: "/jobs" },
 ]
 
 const getMenuIcon = (path: string) => {
@@ -54,7 +54,8 @@ const Navigation = () => {
               <Link href={item.path}>
                 <a>
                   {getMenuIcon(item.path)}
-                  <span>{item.title}</span>
+                  <span className="menu">{item.title}</span>
+                  <span className="suffix">&nbsp;{item.suffix}</span>
                 </a>
               </Link>
             </NavItem>

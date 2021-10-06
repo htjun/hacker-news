@@ -7,11 +7,31 @@ export const NavContainer = styled.nav`
 
   @media ${style.deviceSize.tablet} {
     position: inherit;
+    margin-right: 48px;
+  }
+
+  @media ${style.deviceSize.phablet} {
+    position: inherit;
+    margin-right: 40px;
+  }
+
+  ul {
+    @media ${style.deviceSize.tablet} {
+      display: flex;
+    }
   }
 `
 
 export const NavItem = styled.li`
   margin-bottom: 4px;
+
+  @media ${style.deviceSize.tablet} {
+    margin-left: 12px;
+  }
+
+  @media ${style.deviceSize.phablet} {
+    margin-left: 4px;
+  }
 
   a {
     display: flex;
@@ -32,6 +52,16 @@ export const NavItem = styled.li`
       margin-bottom: -1px;
       fill: currentColor;
       opacity: 0.8;
+
+      @media ${style.deviceSize.tablet} {
+        display: none;
+      }
+    }
+
+    .suffix {
+      @media ${style.deviceSize.phablet} {
+        display: none;
+      }
     }
 
     &:hover {

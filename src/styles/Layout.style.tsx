@@ -13,12 +13,23 @@ export const LayoutInner = styled.div`
   padding: 48px;
 
   aside {
-    display: block;
+    display: flex;
+    flex-direction: column;
     flex: 0 0 200px;
     margin-right: 64px;
 
     @media ${style.deviceSize.tablet} {
       margin-right: 0;
+      margin-bottom: 24px;
+      flex-direction: row;
+      flex-basis: 0;
+      justify-content: space-between;
+    }
+
+    @media ${style.deviceSize.phablet} {
+      border-bottom: 1px solid ${({ theme }) => theme.background.l4};
+      padding-bottom: 12px;
+      margin-bottom: 32px;
     }
   }
 
@@ -31,5 +42,9 @@ export const LayoutInner = styled.div`
   @media ${style.deviceSize.tablet} {
     flex-direction: column;
     padding: 24px;
+  }
+
+  @media ${style.deviceSize.phablet} {
+    padding: 16px;
   }
 `

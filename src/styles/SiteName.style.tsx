@@ -2,10 +2,17 @@ import styled from "styled-components"
 import * as style from "src/styles/style"
 
 export const SiteNameContainer = styled.h1`
+  margin-bottom: 48px;
+
+  @media ${style.deviceSize.tablet} {
+    display: grid;
+    place-items: center;
+    margin: 0;
+  }
+
   a {
     display: flex;
     align-items: baseline;
-    margin-bottom: 50px;
     color: ${({ theme }) => theme.background.l9};
     transition: opacity 0.08s;
 
@@ -19,7 +26,11 @@ export const SiteNameContainer = styled.h1`
     fill: currentColor;
 
     @media ${style.deviceSize.tablet} {
-      width: clamp(24px, 10vw, 48px);
+      width: 40px;
+    }
+
+    @media ${style.deviceSize.phablet} {
+      width: 32px;
     }
   }
 
