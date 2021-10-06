@@ -4,6 +4,10 @@ import * as style from "src/styles/style"
 export const CommentsContainer = styled.ul`
   padding-left: 16px;
 
+  @media ${style.deviceSize.phablet} {
+    padding-left: 1vw;
+  }
+
   details {
     color: ${({ theme }) => theme.text.neutral.l3};
 
@@ -26,6 +30,10 @@ export const CommentContainer = styled.li`
   color: ${({ theme }) => theme.text.neutral.l1};
   line-height: ${style.textLineHeight.normal};
 
+  @media ${style.deviceSize.phablet} {
+    padding-left: 2vw;
+  }
+
   p,
   pre {
     margin: 1em 0;
@@ -34,6 +42,7 @@ export const CommentContainer = styled.li`
 
   a {
     text-decoration: underline;
+    word-break: break-all;
   }
 `
 
