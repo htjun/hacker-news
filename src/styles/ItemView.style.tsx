@@ -70,6 +70,7 @@ export const ItemLink = styled.a`
   display: inline-flex;
   align-items: center;
   font-size: ${style.fontSize.sm};
+  word-break: break-all;
   padding: 12px 16px;
   border-radius: 8px;
   color: ${({ theme }) => theme.text.neutral.l3};
@@ -83,6 +84,7 @@ export const ItemLink = styled.a`
     fill: ${({ theme }) => theme.text.neutral.l3};
     width: 16px;
     height: 16px;
+    flex-shrink: 0;
     margin-right: 12px;
   }
 `

@@ -4,7 +4,7 @@ import * as style from "src/styles/style"
 export const SiteNameContainer = styled.h1`
   margin-bottom: 48px;
 
-  @media ${style.deviceSize.tablet} {
+  @media ${style.deviceSize.phablet} {
     display: grid;
     place-items: center;
     margin: 0;

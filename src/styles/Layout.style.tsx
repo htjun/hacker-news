@@ -22,13 +22,13 @@ export const LayoutInner = styled.div`
     @media ${style.deviceSize.tablet} {
       margin-right: 0;
       margin-bottom: 24px;
+      border-bottom: 1px solid ${({ theme }) => theme.background.l4};
       flex-direction: row;
       flex-basis: 0;
       justify-content: space-between;
     }
 
     @media ${style.deviceSize.phablet} {
-      border-bottom: 1px solid ${({ theme }) => theme.background.l4};
       padding-bottom: 12px;
       margin-bottom: 32px;
     }
