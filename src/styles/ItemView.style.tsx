@@ -81,6 +81,7 @@ export const ItemLink = styled.a`
   svg {
     fill: ${({ theme }) => theme.text.neutral.l3};
     width: 16px;
+    height: 16px;
     margin-right: 16px;
   }
 `
