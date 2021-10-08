@@ -22,8 +22,8 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
   @font-face {
     font-family: 'raf';
-    src: url('fonts/raf-bold.eot');
-    src: url('fonts/raf-bold.eot?#iefix') format('embedded-opentype'), url('fonts/raf-bold.woff2') format('woff2'), url('fonts/raf-bold.woff') format('woff');
+    src: url('/fonts/raf-bold.eot');
+    src: url('/fonts/raf-bold.eot?#iefix') format('embedded-opentype'), url('/fonts/raf-bold.woff2') format('woff2'), url('/fonts/raf-bold.woff') format('woff');
     font-weight: 700;
     font-style: bold;
     font-display: block;
