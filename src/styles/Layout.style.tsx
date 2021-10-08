@@ -17,6 +17,7 @@ export const LayoutInner = styled.div`
     flex-direction: column;
     flex: 0 0 200px;
     margin-right: 64px;
+    min-height: 50px;
 
     @media ${style.deviceSize.tablet} {
       margin-right: 0;

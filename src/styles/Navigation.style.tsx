@@ -15,6 +15,12 @@ export const NavContainer = styled.nav`
     margin-right: 40px;
   }
 
+  &.nav-item-view {
+    @media ${style.deviceSize.phablet} {
+      display: none;
+    }
+  }
+
   ul {
     @media ${style.deviceSize.tablet} {
       display: flex;
@@ -30,7 +36,7 @@ export const NavItem = styled.li`
   }
 
   @media ${style.deviceSize.phablet} {
-    margin-left: 4px;
+    margin-left: 6px;
   }
 
   a {

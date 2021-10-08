@@ -21,7 +21,7 @@ const ItemView = (props: any) => {
     <Layout>
       <aside>
         <SiteName />
-        <NavContainer>
+        <NavContainer className="nav-item-view">
           <NavItem as="div">
             <a onClick={() => router.back()}>
               <IconArrowLeft />
