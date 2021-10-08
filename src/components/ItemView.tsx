@@ -5,8 +5,13 @@ import StoryController from "src/components/StoryController"
 import Comments from "src/components/Comments"
 import dateFormatter from "src/helpers/dateFormatter"
 import { NavContainer, NavItem } from "src/styles/Navigation.style"
-import { ItemContainer, ItemComments } from "src/styles/ItemView.style"
+import {
+  ItemContainer,
+  ItemComments,
+  ItemLink,
+} from "src/styles/ItemView.style"
 import IconArrowLeft from "src/assets/icons/IconArrowLeft.svg"
+import IconLink from "src/assets/icons/IconLink.svg"
 
 const ItemView = (props: any) => {
   const { data, darkMode, setDarkMode } = props
@@ -38,6 +43,12 @@ const ItemView = (props: any) => {
               <strong>{data.score}</strong>&nbsp;points
             </li>
           </ul>
+          {data.url && (
+            <ItemLink href={data.url} target="_blank">
+              <IconLink />
+              <span>{data.url}</span>
+            </ItemLink>
+          )}
           {data.text && (
             <article dangerouslySetInnerHTML={{ __html: data.text }} />
           )}

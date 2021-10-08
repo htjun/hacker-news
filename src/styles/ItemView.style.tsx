@@ -15,7 +15,7 @@ export const ItemContainer = styled.div`
 
   .story-details {
     display: flex;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     font-size: ${style.fontSize.sm};
     color: ${({ theme }) => theme.text.neutral.l2};
 
@@ -64,5 +64,23 @@ export const ItemComments = styled.section`
 
   & > ul {
     padding-left: 0;
+  }
+`
+export const ItemLink = styled.a`
+  display: inline-flex;
+  font-size: ${style.fontSize.sm};
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: ${({ theme }) => theme.text.neutral.l3};
+  background-color: ${({ theme }) => theme.background.l2};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.background.l3};
+  }
+
+  svg {
+    fill: ${({ theme }) => theme.text.neutral.l3};
+    width: 16px;
+    margin-right: 16px;
   }
 `
