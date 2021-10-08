@@ -25,7 +25,7 @@ const ItemView = (props: any) => {
           <NavItem as="div">
             <a onClick={() => router.back()}>
               <IconArrowLeft />
-              <span>Back to list</span>
+              <span>Go back</span>
             </a>
           </NavItem>
         </NavContainer>
