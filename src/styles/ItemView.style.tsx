@@ -68,6 +68,7 @@ export const ItemComments = styled.section`
 `
 export const ItemLink = styled.a`
   display: inline-flex;
+  align-items: center;
   font-size: ${style.fontSize.sm};
   padding: 12px 16px;
   border-radius: 8px;
