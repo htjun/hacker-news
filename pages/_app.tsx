@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 require("destyle.css")
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import { darkTheme, lightTheme } from "src/styles/theme"
@@ -32,6 +32,21 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const colorScheme = e.matches ? true : false
+        setDarkMode(colorScheme)
+      })
+
+    return () => {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", () => {})
+    }
+  }, [])
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
