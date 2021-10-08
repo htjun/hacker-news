@@ -52,3 +52,15 @@ export const Commenter = styled.div`
   font-size: ${style.fontSize.sm};
   color: ${({ theme }) => theme.text.navy.l3};
 `
+
+export const LoadingIndicator = styled.div`
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 32px;
+  background-color: ${({ theme }) => theme.background.l2};
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: ${style.fontSize.xs};
+  color: ${({ theme }) => theme.text.neutral.l4};
+`
