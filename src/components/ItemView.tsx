@@ -31,7 +31,11 @@ const ItemView = (props: any) => {
         </NavContainer>
       </aside>
       <main>
-        <StoryController darkMode={darkMode} setDarkMode={setDarkMode} />
+        <StoryController
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+          itemView
+        />
         <ItemContainer>
           <h1>{data.title}</h1>
           <ul className="story-details">

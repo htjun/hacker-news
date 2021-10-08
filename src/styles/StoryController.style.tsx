@@ -21,6 +21,17 @@ export const InputText = styled.input`
   }
 `
 
+export const TopFiller = styled.div`
+  width: 100%;
+  height: 26px;
+  border-bottom: 1px solid ${({ theme }) => theme.background.l9};
+  margin-bottom: 48px;
+
+  @media ${style.deviceSize.tablet} {
+    display: none;
+  }
+`
+
 export const DarkModeButton = styled.div`
   display: grid;
   place-items: center;
