@@ -82,6 +82,6 @@ export const ItemLink = styled.a`
     fill: ${({ theme }) => theme.text.neutral.l3};
     width: 16px;
     height: 16px;
-    margin-right: 16px;
+    margin-right: 12px;
   }
 `
