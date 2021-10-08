@@ -34,6 +34,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setDarkMode(true)
+    }
+
     window
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", (e) => {
