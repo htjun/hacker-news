@@ -15,9 +15,19 @@ export const InputText = styled.input`
   color: ${({ theme }) => theme.text.neutral.l1};
   transition: all 0.12s linear;
 
+  @media ${style.deviceSize.phablet} {
+    font-size: ${style.fontSize.base};
+  }
+
   &:focus {
     outline: none;
     border-color: ${style.hsl("blue", 64)};
+  }
+
+  &::placeholder {
+    @media ${style.deviceSize.phablet} {
+      font-size: ${style.fontSize.sm};
+    }
   }
 `
 
