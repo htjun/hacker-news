@@ -26,7 +26,7 @@ const Stories = (props: any) => {
           .map((item: any, index: number) => {
             return <Story key={item ? item.id : index} data={item && item} />
           })}
-      {itemCount < data.length && (
+      {data && itemCount < data.length && (
         <LoadMorebutton onClick={handleLoadMoreClick}>
           Load more stories..
         </LoadMorebutton>
