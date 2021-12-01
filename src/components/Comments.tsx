@@ -30,7 +30,8 @@ const Comment = ({ commentId }: any) => {
         {data.kids && (
           <details open={true}>
             <summary>
-              <strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;comments
+              <strong>{data.kids ? data.kids.length : 0}</strong>&nbsp;
+              {data?.kids?.length > 1 ? "comments" : "comment"}
             </summary>
             <Comments data={data.kids} />
           </details>
